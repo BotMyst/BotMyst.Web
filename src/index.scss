@@ -1,4 +1,7 @@
 @import "../node_modules/skeleton-scss/scss/skeleton";
+@import "./scss/variables";
+@import "./scss/mixins";
+@import "./components/navigation/navigation";
 
 $color-nano: #141414;
 

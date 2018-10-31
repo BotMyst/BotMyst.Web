@@ -1,0 +1,145 @@
+header
+{
+    padding-bottom: 7.5rem;
+
+    nav
+    {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin-top: 1.5rem;
+        padding: 0 1rem;
+        background-color: $color-nanolight;
+        border-radius: 0.3rem;
+        max-height: 40px;
+        overflow: hidden;
+        @include default-transition();
+        @include default-shadow();
+        
+        .logo
+        {
+            display: inline-block;
+
+            img
+            {
+                padding-right: 0.5rem;
+                width: 35px;
+            }
+
+            .avatar
+            {
+                width: 30px;
+                border-radius: 0.3rem;
+                padding-top: 0.5rem;
+                float: left;
+            }
+
+            .username
+            {
+                margin: 0;
+                padding-top: -1rem;
+                float: left;
+                line-height: 40px;
+                height: 40px;
+                color: $color-white;
+                letter-spacing: 0.1rem;
+
+                .logout
+                {
+                    letter-spacing: initial;
+                    font-size: 1.1rem;
+                
+                    a
+                    {
+                        color: $color-nanolightlight;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .menuToggle
+        {
+            float: right;
+            padding: 0.25rem 0.5rem;
+            padding-top: 0.8rem;
+            color: $color-white;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 0.1rem;
+            @include default-transition();
+
+            i
+            {
+                margin-left: 0.75rem;
+            }
+
+            &:hover
+            {
+                color: $color-range;
+            }
+        }
+
+        ul
+        {
+            list-style-type: none;
+            padding-left: 0.75rem;
+            margin-bottom: 0;
+            display: none;
+
+            li
+            {
+                a
+                {
+                    color: $color-white;
+                    text-decoration: none;
+                    letter-spacing: 0.1rem;
+                    @include default-transition();
+
+                    &:hover
+                    {
+                        color: $color-range;
+                    }
+                }
+            }
+        }
+    }
+
+    nav.navigationActive
+    {
+        max-height: 200px;
+
+        ul
+        {
+            display: block;
+        }
+    }
+}
+
+@media all and (min-width: $break-large)
+{
+    header
+    {
+        nav
+        {
+            .menuToggle
+            {
+                display: none;
+            }
+
+            ul
+            {
+                display: block;
+                float: right;
+                padding: 0 1rem;
+                padding-top: 0.8rem;
+
+                li
+                {
+                    display: inline-block;
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+}

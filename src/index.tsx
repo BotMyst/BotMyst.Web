@@ -3,9 +3,9 @@ import * as ReactDOM from 'react-dom';
 
 import './index.scss';
 
-import { Hello } from './components/Hello';
+import { Navigation } from './components/navigation/navigation';
 
 ReactDOM.render (
-    <Hello compiler="TypeScript" framework="React" />,
-    document.getElementById ('example')
+    <Navigation />,
+    document.getElementsByClassName ('container') [0]
 );
