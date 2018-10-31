@@ -1,4 +1,5 @@
 import * as React from "react";
+import { NavLink } from "react-router-dom";
 
 interface State
 {
@@ -33,8 +34,8 @@ export class Navigation extends React.Component<{}, State>
                         <ul>
                             <li><a href="/">Home</a></li>
                             {/* TODO: Set a proper invite link */}
-                            <li><a href="/">Invite</a></li>
-                            <li><a href="/guilds">Dashboard</a></li>
+                            <li><NavLink to="/">Invite</NavLink></li>
+                            <li><NavLink to="/guilds">Dashboard</NavLink></li>
                             <li><a href="https://github.com/BotMyst" target="_blank">GitHub</a></li>
                         </ul>
                     </div>

@@ -1,13 +1,62 @@
 @import "../node_modules/skeleton-scss/scss/skeleton";
 @import "./scss/variables";
 @import "./scss/mixins";
+@import "./scss/buttons";
+@import "./scss/messages";
 @import "./components/navigation/navigation";
-
-$color-nano: #141414;
+@import "./components/home/home";
 
 body
 {
     background: $color-nano;
-    color: white;
-    font-family: sans-serif;
+    font-family: $font-stack;
+    color: $color-white;
+}
+
+a
+{
+    color: $color-range;
+    text-decoration: none;
+    @include default-transition();
+
+    &:active
+    {
+        color: $color-nanolightlight;
+    }
+
+    &:hover
+    {
+        color: $color-white;
+    }
+}
+
+h6
+{
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: normal;
+}
+
+input[type=text]
+{
+    background-color: $color-nanolight;
+    border: none;
+    border-radius: 0.3rem;
+    color: $color-white;
+
+    &:focus
+    {
+        outline: none;
+        border: none;
+    }
+}
+
+form
+{
+    margin: 0;
+}
+
+hr
+{
+    border-color: $color-nanolightlight;
 }
